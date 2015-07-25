@@ -1,18 +1,18 @@
 /*
- * Copyright (C) 2010 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+* Copyright (C) 2010 The Android Open Source Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
 
 package com.example.android.imagedownloader;
 
@@ -44,19 +44,19 @@ import java.util.LinkedHashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * This helper class download images from the Internet and binds those with the provided ImageView.
- *
- * <p>It requires the INTERNET permission, which should be added to your application's manifest
- * file.</p>
- *
- * A local cache of downloaded images is maintained internally to improve performance.
- */
+* This helper class download images from the Internet and binds those with the provided ImageView.
+*
+* <p>It requires the INTERNET permission, which should be added to your application's manifest
+* file.</p>
+*
+* A local cache of downloaded images is maintained internally to improve performance.
+*/
 public class ImageDownloader {
     private static final String LOG_TAG = "ImageDownloader";
 
     public enum Mode { NO_ASYNC_TASK, NO_DOWNLOADED_DRAWABLE, CORRECT }
     private Mode mode = Mode.NO_ASYNC_TASK;
-    
+
     /**
      * Download the specified image from the Internet and binds it to the provided ImageView. The
      * binding is immediate if the image is found in the cache and will be done asynchronously
@@ -304,14 +304,14 @@ public class ImageDownloader {
         clearCache();
     }
 
-    
+
     /*
      * Cache-related fields and methods.
-     * 
+     *
      * We use a hard and a soft cache. A soft reference cache is too aggressively cleared by the
      * Garbage Collector.
      */
-    
+
     private static final int HARD_CACHE_CAPACITY = 10;
     private static final int DELAY_BEFORE_PURGE = 10 * 1000; // in milliseconds
 
@@ -385,7 +385,7 @@ public class ImageDownloader {
 
         return null;
     }
- 
+
     /**
      * Clears the image cache used internally to improve performance. Note that for memory
      * efficiency reasons, the cache will automatically be cleared after a certain inactivity delay.
