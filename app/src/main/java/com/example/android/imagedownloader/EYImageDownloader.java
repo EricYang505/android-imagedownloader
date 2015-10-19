@@ -107,7 +107,7 @@ public class EYImageDownloader {
 
             if (viewHolderWeakReference != null) {
                 ViewHolder viewHolder = viewHolderWeakReference.get();
-                if (this == viewHolder.taskWeakReference.get()) {
+                if (viewHolder.taskWeakReference!=null && (viewHolder.taskWeakReference.get()==null || this == viewHolder.taskWeakReference.get()) ) {
                     viewHolder.imageView.setImageBitmap(bitmap);
                 }else {
                     Log.e("Not current task!!!!!!", "Not current task!!!!!!!");
