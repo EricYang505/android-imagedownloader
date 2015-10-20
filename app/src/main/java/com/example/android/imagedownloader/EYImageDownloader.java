@@ -107,6 +107,10 @@ public class EYImageDownloader {
 
             if (viewHolderWeakReference != null) {
                 ViewHolder viewHolder = viewHolderWeakReference.get();
+                if(viewHolder==null){
+                    Log.e("viewHolder is empty!!!!!!", "viewHolder is empt!!!!!!!");
+                    return;
+                }
                 if ( viewHolder.taskWeakReference==null || viewHolder.taskWeakReference.get()==null || this == viewHolder.taskWeakReference.get() ) {
                     viewHolder.imageView.setImageBitmap(bitmap);
                 }else {
