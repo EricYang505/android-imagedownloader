@@ -4,4 +4,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" android:showAsAction="never" />
 </menu>
-<!-- From: file:/Users/eyang/Documents/android-imagedownloader/app/src/main/res/menu/recycle_activity_menu.xml -->
+<!-- From: file:/Users/eyang/android-imagedownloader/ThumbnailListView/app/src/main/res/menu/recycle_activity_menu.xml -->

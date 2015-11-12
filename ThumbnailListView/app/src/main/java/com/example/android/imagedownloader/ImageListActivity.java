@@ -17,9 +17,8 @@
 package com.example.android.imagedownloader;
 
 import android.app.Activity;
-import android.app.ListActivity;
-import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -28,8 +27,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-
-import java.lang.ref.WeakReference;
 
 public class ImageListActivity extends Activity implements RadioGroup.OnCheckedChangeListener {
     private final EYImageDownloader imageDownloader = EYImageDownloader.getInstance();//new ImageDownloader();
@@ -59,6 +56,14 @@ public class ImageListActivity extends Activity implements RadioGroup.OnCheckedC
             return ImageData.URLS.length;
         }
 
+        public int getItemViewType(int position) {
+            return position%2;
+        }
+
+        public int getViewTypeCount() {
+            return 2;
+        }
+
         public String getItem(int position) {
             return ImageData.URLS[position];
         }
@@ -68,19 +73,36 @@ public class ImageListActivity extends Activity implements RadioGroup.OnCheckedC
         }
 
         public View getView(int position, View view, ViewGroup parent) {
-            ViewHolder viewHolder;
-            if (view == null) {
-                view = getLayoutInflater().inflate(R.layout.list_item, null);
-                viewHolder = new ViewHolder(view);
-                view.setTag(viewHolder);
-            }else{
-                viewHolder = (ViewHolder) view.getTag();
+            if (position%2==0) {
+                ViewHolder viewHolder;
+                if (view == null) {
+                    view = getLayoutInflater().inflate(R.layout.list_item1, null);
+                    viewHolder = new ViewHolder(view);
+                    view.setTag(viewHolder);
+                } else {
+                    viewHolder = (ViewHolder) view.getTag();
+                }
+                viewHolder.textView.setText("Index:" + position);
+                viewHolder.imageView.setImageDrawable(getResources().getDrawable(R.drawable.icon));
+                imageDownloader.download(ImageData.URLS[position], viewHolder);
+            }else {
+                ViewHolder2 viewHolder;
+                if (view == null) {
+                    view = getLayoutInflater().inflate(R.layout.list_item2, null);
+                    viewHolder = new ViewHolder2();
+                    viewHolder.textView = (TextView) view.findViewById(R.id.listTextId2);
+                    view.setTag(viewHolder);
+                } else {
+                    viewHolder = (ViewHolder2) view.getTag();
+                }
+                viewHolder.textView.setText("Index:" + position);
             }
-            viewHolder.textView.setText("Index:" + position);
-            viewHolder.imageView.setImageDrawable(getResources().getDrawable(R.drawable.icon));
-            imageDownloader.download(ImageData.URLS[position], viewHolder);
             return view;
         }
+    }
+
+    private class ViewHolder2{
+        TextView textView;
     }
 
 

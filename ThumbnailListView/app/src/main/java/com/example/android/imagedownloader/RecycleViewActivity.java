@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,7 +44,7 @@ public class RecycleViewActivity extends Activity {
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             // create a new view
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item1, parent, false);
             // set the view's size, margins, paddings and layout parameters
             ViewHolder vh = new ViewHolder(v);
             return vh;
