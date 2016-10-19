@@ -3,11 +3,9 @@ package com.example.android.imagedownloader;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.util.LruCache;
 
-import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
@@ -108,13 +106,16 @@ public class EYImageDownloader {
             if (viewHolderWeakReference != null) {
                 ViewHolder viewHolder = viewHolderWeakReference.get();
                 if(viewHolder==null){
-                    Log.e("viewHolder is empty!!!!!!", "viewHolder is empt!!!!!!!");
+                    Log.e("viewHolder is empty!!!", "viewHolder is empt!!!!");
                     return;
                 }
-                if ( viewHolder.taskWeakReference==null || viewHolder.taskWeakReference.get()==null || this == viewHolder.taskWeakReference.get() ) {
-                    viewHolder.imageView.setImageBitmap(bitmap);
-                }else {
+                if ( viewHolder.taskWeakReference.get()!=null && this != viewHolder.taskWeakReference.get() ) {
                     Log.e("Not current task!!!!!!", "Not current task!!!!!!!");
+                }else{
+                    viewHolder.imageView.setImageBitmap(bitmap);
+                }
+                if (viewHolder.taskWeakReference.get()!=null){
+                    viewHolder.taskWeakReference = null;
                 }
             }
         }
