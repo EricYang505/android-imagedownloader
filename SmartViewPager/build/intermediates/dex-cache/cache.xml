@@ -2,18 +2,25 @@
 <items version="2" >
 
     <item
+        jar="/Users/eyang/android-imagedownloader/SmartViewPager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/eyang/android-imagedownloader/SmartViewPager/app/build/intermediates/pre-dexed/debug/classes-939b42fba176d100d1ae709431affef15375e974.jar" />
+    </item>
+    <item
+        jar="/Users/eyang/android-imagedownloader/SmartViewPager/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/eyang/android-imagedownloader/SmartViewPager/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-eb741a93e99721e8db10dd95ab5d63835d73911f.jar" />
+    </item>
+    <item
         jar="/Users/eyang/Downloads/SmartViewPager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
         <dex dex="/Users/eyang/Downloads/SmartViewPager/app/build/intermediates/pre-dexed/debug/classes-3948b961011688bfaff1686baa4ae9d97b1a301b.jar" />
-    </item>
-    <item
-        jar="/Users/eyang/Downloads/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/eyang/Downloads/SmartViewPager/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-31804fa3dbbf903e70c8adeb9ffc5a5760be84b8.jar" />
     </item>
     <item
         jar="/Users/eyang/Downloads/SmartViewPager/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
@@ -28,6 +35,20 @@
         revision="23.0.1"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
         <dex dex="/Users/eyang/Downloads/SmartViewPager/app/build/intermediates/pre-dexed/debug/classes-61b056f974ac01a3b0a6df3fdbae1adaeff46b89.jar" />
+    </item>
+    <item
+        jar="/Users/eyang/android-imagedownloader/SmartViewPager/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/eyang/android-imagedownloader/SmartViewPager/app/build/intermediates/pre-dexed/debug/classes-d70c0851b481ccfa58a7590a4b4b641a15d32ca5.jar" />
+    </item>
+    <item
+        jar="/Users/eyang/Downloads/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/eyang/Downloads/SmartViewPager/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-31804fa3dbbf903e70c8adeb9ffc5a5760be84b8.jar" />
     </item>
 
 </items>
